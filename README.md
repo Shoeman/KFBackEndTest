@@ -22,6 +22,8 @@ Compile: `npm run compile`
 
 Unit tests: `npm run unittest`
 
+Full checks and tests: `npm run test`
+
 Run in development mode: `npm run dev`
 
 Run in production mode: `npm run prod`
@@ -33,4 +35,3 @@ Run in production mode: `npm run prod`
 ## Nice to have
 - Code coverage
 - Higher level mocking for api calls
-- audit
