@@ -4,7 +4,8 @@ module.exports = {
   testEnvironment: 'node',
 
   testMatch: [
-      "**/unit/*.test.ts"
+      "**/unit/**/*.test.ts",
+      "**/unit/*.test.ts",
   ],
 
   collectCoverage: true,

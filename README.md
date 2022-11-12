@@ -21,9 +21,10 @@ Manual run (likely to change):
 `npm run run-index`
 
 ## TODO
-
-- Handle http requests
 - Get outages
+  - environment variables
 
 ## Nice to have
 - Code coverage
+- Higher level mocking for api calls
+- audit
