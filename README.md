@@ -29,9 +29,12 @@ Run in development mode: `npm run dev`
 Run in production mode: `npm run prod`
 
 ## TODO
-- Filter outages on date
 - Retrieve site info by id
+- Filter outages by siteId devices
+- Post outages
+- Sort out index
 
 ## Nice to have
 - Code coverage
+- Cater for all api responses
 - Higher level mocking for api calls

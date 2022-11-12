@@ -10,7 +10,8 @@
     "dev": "node -r dotenv/config ./build/index.js",
     "lint": "node ./node_modules/eslint/bin/eslint.js . --ext .js,.ts --max-warnings=0",
     "unittest": "jest --config=jest.config.js --silent",
-    "test": "npm run lint && npm audit && npm run unittest"
+    "test": "npm run lint && npm audit && npm run unittest",
+    "ci": "npm run clean && tsc && npm run test"
   },
   "repository": {
     "type": "git",
