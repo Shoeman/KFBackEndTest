@@ -35,7 +35,7 @@ async function requestWithRetries<R>(requestFunction: () => Promise<ApiResponse<
     const retryWait = Number(process.env.REQUEST_RETRY_WAIT_TIME || 1000);
 
     return await requestFunction().catch(async error => {
-        if (error.status == 500 && retryCount < maxRetries) {
+        if ((error.status == 500 || error.response?.status == 500) && retryCount < maxRetries) {
             console.log("500 status received. Retrying...")
             await wait(retryWait);
             return requestWithRetries(requestFunction, retryCount + 1)

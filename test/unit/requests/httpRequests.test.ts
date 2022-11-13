@@ -71,6 +71,25 @@ describe("httpGet", () => {
         await expect(result).resolves.toEqual({data: "foo", status: 200});
     });
 
+    it('should retry if an error has a 500 status in the response body', async function () {
+
+        mockGet.mockRejectedValueOnce({data: "error", response: {status: 500}});
+        mockGet.mockResolvedValueOnce({data: "foo", status: 200});
+
+        const result = httpGet("https://api.zooklabs.com/zooks/1", "TestKey");
+
+        const expectedConfig = {
+            headers: {
+                "x-api-key": "TestKey"
+            }
+        };
+        // Jest cannot seem to count subsequent calls to axios but it does throw and retry
+        // expect(mockGet).toBeCalledTimes(2);
+        expect(mockGet).toHaveBeenNthCalledWith(1, "https://api.zooklabs.com/zooks/1", expectedConfig)
+        // expect(mockGet).toHaveBeenNthCalledWith(2, "https://api.zooklabs.com/zooks/1", expectedConfig);
+        await expect(result).resolves.toEqual({data: "foo", status: 200});
+    });
+
     it('should reject with 500 if retries exceeded', async function () {
 
         mockGet.mockRejectedValueOnce({data: "error", status: 500});
