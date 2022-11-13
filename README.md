@@ -1,9 +1,10 @@
 # KFBackEndTest
 Built using:
 - NodeJS v18.x
+- Typescript
 - Requests handled with Axios
 
-Unit tested with Jest, dependencies audited with npm.
+Unit tested with Jest, dependencies audited with npm, linted with eslint.
 
 ## Setup
 
@@ -34,9 +35,8 @@ Run in development mode: `npm run dev`
 
 Run in production mode: `npm run prod`
 
-## TODO
-- Cater for 500 response
 
-## Nice to have
-- Code coverage
+## (Would be) Nice to do:
+- Enforce code coverage
 - Higher level mocking for api calls
+- Mock request retries properly
