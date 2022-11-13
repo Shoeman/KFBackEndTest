@@ -5,15 +5,13 @@ jest.mock('axios');
 const mockGet = axios.get as jest.Mock;
 const mockPost = axios.post as jest.Mock;
 
-process.env.KF_API_KEY="TestKey"
-
 describe("httpGet", () => {
 
     it('should take a url', async function () {
 
         mockGet.mockResolvedValueOnce({data: "foo", status: 200});
 
-        const result = httpGet("https://api.zooklabs.com/zooks/1");
+        const result = httpGet("https://api.zooklabs.com/zooks/1", "TestKey");
 
         const expectedConfig = {
             headers: {

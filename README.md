@@ -32,7 +32,6 @@ Run in production mode: `npm run prod`
 
 ## TODO
 - Index/runner to take siteId arg
-- Standardise http calls
 
 ## Nice to have
 - Code coverage
