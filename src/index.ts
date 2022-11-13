@@ -14,4 +14,7 @@ console.log(`Running update for ${siteId}`)
 updateSiteOutages(siteId)
     .then((response) => {
         console.log("Post response status: " + JSON.stringify(response.status));
+    })
+    .catch(error => {
+        console.error("Unexpected error: " + error);
     });

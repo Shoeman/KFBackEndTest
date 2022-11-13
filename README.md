@@ -35,9 +35,7 @@ Run in development mode: `npm run dev`
 Run in production mode: `npm run prod`
 
 ## TODO
-- Cater for all api responses
-  - 500
-  - Other errors
+- Cater for 500 response
 
 ## Nice to have
 - Code coverage
