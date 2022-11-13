@@ -5,7 +5,6 @@ module.exports = {
 
   testMatch: [
       "**/unit/**/*.test.ts",
-      "**/unit/*.test.ts",
   ],
 
   collectCoverage: true,
