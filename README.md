@@ -24,12 +24,13 @@ Unit tests: `npm run unittest`
 
 Full checks and tests: `npm run test`
 
+Full build and test suite: `npm run ci`
+
 Run in development mode: `npm run dev`
 
 Run in production mode: `npm run prod`
 
 ## TODO
-- Retrieve site info by id
 - Filter outages by siteId devices
 - Post outages
 - Sort out index
