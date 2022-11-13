@@ -1,6 +1,9 @@
+import {updateSiteOutages} from "./processing/updateSiteOutages";
 
-console.log("Hello World");
+console.log("Starting outage update process");
 console.log("KF_API_URL: " + process.env.KF_API_URL);
 
-// Call full process once implemented
-console.log("Full process to be implemented")
+updateSiteOutages("norwich-pear-tree")
+    .then((response) => {
+        console.log("Post response status: " + JSON.stringify(response.status));
+    });

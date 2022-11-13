@@ -3,6 +3,7 @@ import {Device, SiteInfo} from "../requests/siteInfo";
 import {DeviceOutage} from "../requests/siteOutages";
 import {validOutage} from "./outageValidation";
 
+// Given outage data and siteInfo, returns all DeviceOutage info for the site within the date threshold
 export function createSiteOutages(outages: Outage[], siteInfo: SiteInfo): DeviceOutage[] {
 
     const devicesById = new Map<string, Device>();

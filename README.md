@@ -31,11 +31,12 @@ Run in development mode: `npm run dev`
 Run in production mode: `npm run prod`
 
 ## TODO
-- Post outages
-- Sort out index
-- 'main' function to run whole program
+- Index/runner to take siteId arg
+- Standardise http calls
 
 ## Nice to have
 - Code coverage
 - Cater for all api responses
+  - 500
+  - Other errors
 - Higher level mocking for api calls
