@@ -31,9 +31,9 @@ Run in development mode: `npm run dev`
 Run in production mode: `npm run prod`
 
 ## TODO
-- Filter outages by siteId devices
 - Post outages
 - Sort out index
+- 'main' function to run whole program
 
 ## Nice to have
 - Code coverage
